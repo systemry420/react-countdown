@@ -2,3 +2,25 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.element {
+  margin: 1em;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.element h1 {
+  font-size: 7em;
+}
+
+.element span {
+  font-size: 2em;
+}
