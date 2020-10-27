@@ -13,6 +13,10 @@ class App extends Component {
       ]
     }
   }
+
+  formatNum(a) {
+    return a < 10 ? '0'+a : a
+  }
   
   componentDidMount() {
     // get the new date every second
@@ -28,10 +32,10 @@ class App extends Component {
       // set the new date
       this.setState({
         data: [
-          { name: "Days", value: d },
-          { name: "Hours", value: h },
-          { name: "Minutes", value: m },
-          { name: "Seconds", value: s },
+          { name: "Days", value: this.formatNum(d) },
+          { name: "Hours", value: this.formatNum(h) },
+          { name: "Minutes", value: this.formatNum(m) },
+          { name: "Seconds", value: this.formatNum(s) },
         ]
       })
     }, 1000)
